@@ -1,126 +1,131 @@
 # Datasheet Extraction
 
-Generic, provider-neutral extraction of structured, **cited** fields from heterogeneous process
-datasheets (PDF) into a queryable schema, with a human-in-the-loop (HITL) review loop.
+Turn messy engineering **process datasheets** (PDF) into clean, **queryable, cited** data - with a
+human-in-the-loop review screen to correct what the model gets wrong, and a feedback loop that learns
+from each correction.
 
-Built for the Raven backend assignment. See [`PLAN.md`](PLAN.md) for the full plan,
-[`DECISIONS.md`](DECISIONS.md) for the decision trail, and [`WRITEUP.md`](WRITEUP.md) for the
-architecture/eval/cost write-up. The original assignment brief is at the bottom of this file.
+It runs **with no API key out of the box** (a fixture/replay backend stands in for the model), so you
+can try the whole thing - extract, review, evaluate, cost - in a couple of minutes.
 
-## Key ideas
+> Built for the Raven backend assignment. Deeper docs: [`WRITEUP.md`](WRITEUP.md) (architecture,
+> trade-offs, evaluation, cost) and [`docs/PLAN.md`](docs/PLAN.md) (the full plan). The original
+> assignment brief is at the bottom of this file.
 
-- **Vision-first, single generic extractor** - forced by the inputs: one datasheet is a flattened
-  scan with no text layer, and the four docs span unrelated templates, two languages, and metric
-  vs imperial units. So there are **no per-template parsers**.
-- **Schema-open harvest** - Pass 1 extracts whatever labelled fields exist (key-value pairs,
-  checkboxes, footnotes, multi-case tables, title block), never a fixed pump-field list, so it
-  generalizes to unseen layouts.
-- **Provider-neutral, key-independent** - the model sits behind an `ExtractionBackend` interface.
-  The whole system runs **with no API key** via a fixture/replay backend; a real adapter
-  (Claude / Gemini / Kimi) drops in when a key is available.
-- **Provenance on every field** - model-emitted page + verbatim snippet, verified against the PDF
-  text layer where one exists (grounding).
-- **Feedback loop** - corrections persist and a corrected canonical-key mapping is fed back as a
-  vocab override, so the next extraction improves.
+---
 
-## Pipeline
-
-```
-PDF -> PyMuPDF page images + text -> ExtractionBackend (Pass 1, verbatim harvest)
-    -> Pass 2 normalize (canonical key, SI units, confidence, grounding)
-    -> JSON store -> review UI / eval / cost
-```
-
-## Setup
-
-Requires Python 3.12. A virtualenv with all dependencies is included; or install fresh:
+## Quickstart (no API key)
 
 ```bash
+# 1. Create a virtualenv and install deps (Python 3.12)
 python -m venv venv
-venv/Scripts/python -m pip install -r requirements.txt   # Windows
-# source venv/bin/activate && pip install -r requirements.txt   # macOS/Linux
-```
+venv/Scripts/python -m pip install -r requirements.txt      # Windows
+# source venv/bin/activate && pip install -r requirements.txt  # macOS / Linux
 
-No API key is needed to run everything below - the default backend replays fixtures.
-To wire a real provider later, copy `.env.example` to `.env` and add one key.
+# 2. Extract the sample datasheets -> outputs/raw/<doc_id>.json
+python cli.py extract pdfs/pds-P300228.pdf pdfs/pds-P600173.pdf pdfs/pds-P718.pdf
 
-## Usage
+# 3. Open the review UI to inspect / correct fields
+python cli.py review            # then visit http://127.0.0.1:8000
 
-```bash
-# Extract one or more PDFs -> outputs/raw/<doc_id>.json (+ artifacts under outputs/artifacts/)
-python cli.py extract pds-P300228.pdf pds-P600173.pdf pds-P718.pdf
-
-# Launch the HITL review UI (field-first, confidence-sorted, citation + page image inline)
-python cli.py review            # http://127.0.0.1:8000
-
-# Evaluate against the gold set (partial-correctness metrics + hallucination)
+# 4. See the eval metrics, the cost report, and the feedback loop in action
 python cli.py eval
-
-# Cost per document (provider-reported token usage; price table)
 python cli.py cost
-
-# Demonstrate a measurable eval gain from one HITL correction (keyless)
 python cli.py feedback-demo
 ```
 
-Example `extract` output:
+That's it - no key, no cloud, no setup beyond `pip install`. The extractor replays hand-authored
+fixtures so the full pipeline (and the review UI) works offline.
+
+---
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| `python cli.py extract <pdf...>` | Render -> extract -> normalize -> `outputs/raw/<doc_id>.json` (+ artifacts) |
+| `python cli.py review` | Launch the HITL review UI (field-first, confidence-sorted, citations inline) |
+| `python cli.py eval` | Partial-correctness metrics vs the gold set (+ hallucination) |
+| `python cli.py cost` | Per-doc cost from provider token usage (+ price table) |
+| `python cli.py feedback-demo` | Show a measurable eval gain from one correction (keyless) |
+
+---
+
+## Repo structure
 
 ```
-[extract] pds-P300228 via fixture backend ...
-  9 fields, 5 notes, 8 grounded, 9 canonical-mapped -> outputs/raw/pds-P300228.json
+README.md            you are here
+WRITEUP.md           architecture / trade-offs / evaluation / cost (the write-up)
+requirements.txt     dependencies
+.env.example         copy to .env to add a provider key (optional)
+cli.py               command-line entry point
+datasheet/           the library: schema, render, backends, pipeline, vocab, units,
+                       review, evaluate, cost, web (FastAPI UI)
+pdfs/                input datasheets (pds-P300228 / P600173 / P718 / P818)
+fixtures/            hand-authored Pass-1 fixtures for keyless runs (P818 intentionally absent)
+eval/gold/           query-anchored gold labels for the eval
+outputs/             raw extractions (committed as samples) + reviewed + artifacts (ignored)
+docs/PLAN.md         the full build plan
 ```
 
-## Outputs
+---
+
+## Using a real model provider (optional)
+
+The whole system is **provider-neutral**: the model sits behind one `ExtractionBackend` interface, so
+swapping in a real model is a config change, not a rewrite. Today the default is the keyless fixture
+backend; wiring a live adapter is the remaining step (see Status below).
+
+To prepare for a real provider:
+
+```bash
+cp .env.example .env
+```
+
+Then open `.env` and fill in **one** key (you only need one):
 
 ```
-outputs/raw/<doc_id>.json        extraction result (committed as samples)
-outputs/reviewed/<doc_id>.json   after human review
-outputs/artifacts/<doc_id>/      page images, text, pass-1 / final (gitignored)
+GEMINI_API_KEY=...          # Google Gemini (strong native PDF)
+# ANTHROPIC_API_KEY=...     # Claude (native PDF, strong reasoning)
+# MOONSHOT_API_KEY=...      # Kimi K2.6 (cheapest; OpenAI-compatible)
+# OPENAI_API_KEY=...        # GPT (verifier-only; pricey)
 ```
 
-## Schema (per field)
+`.env` is gitignored and never committed. Which provider becomes the default is decided by the
+eval (accuracy vs cost on these documents), not on paper.
 
-Flat field-list (EAV) model: `id`, `type`, `canonical_key` (controlled vocab, nullable so unknown
-fields are preserved), `label_verbatim`, `value_raw`, `value_normalized`, `unit`, `unit_si`,
-`value_si`, `qualifiers` (footnote-resolved), `case` (multi-case tables), `citation`
-(page + snippet + grounding), `confidence`, `review_status`. See [`PLAN.md`](PLAN.md) sec 5.
+---
 
-## Status
+## How it works (in one breath)
 
-All five build phases are complete and run **keyless** on fixtures. Real model accuracy, the P818
-cold-run (a sealed holdout, never used for tuning), and real per-doc cost are wired but pending an
-API key.
+`PDF -> page images + text (PyMuPDF) -> Pass 1 verbatim harvest (the swappable backend) -> Pass 2
+normalize (canonical key, SI units, footnote qualifiers, grounding, confidence) -> JSON store ->
+review UI / eval / cost`. Provenance (page + verbatim snippet, grounded against the text layer) is
+attached to every field. Corrections in the UI persist and feed back as vocab overrides, so the next
+extraction improves. Full detail in [`WRITEUP.md`](WRITEUP.md).
 
-## Repo layout
+---
 
-```
-datasheet/          core library (schema, render, backends, pipeline, vocab, units, review, eval, cost, web)
-cli.py              extract | review | eval | cost | feedback-demo
-fixtures/           hand-authored Pass-1 fixtures (keyless dev) - P818 intentionally absent
-eval/gold/          query-anchored gold labels (P300228/P600173/P718)
-outputs/            extraction + review outputs
-PLAN.md DECISIONS.md WRITEUP.md
-```
+## Status & limitations (honest)
+
+- All five build phases are complete and run **keyless** on fixtures.
+- The fixture-based eval validates the **pipeline and deterministic normalization**, not model
+  *reading* accuracy - that needs a real adapter + key.
+- `pds-P818` is a **sealed holdout** (never used for tuning); its cold-run generalization number is
+  pending a real backend.
+- Real per-doc cost is pending a provider's reported token usage (the cost command shows the price
+  table + estimates today).
 
 ---
 
 ## Assignment brief (original)
 
-A large part of working at Raven is to extract knowledge and insights from a factory plant's
-documentation. Extract structured fields from a process datasheet; these can power search, technical
-bid evaluation, and more.
-
-**What to build:** (1) an extraction pipeline that ingests a datasheet PDF and produces structured
-fields with citations; (2) a HITL feedback loop - a web interface to review/correct extractions and
-explain how feedback improves the pipeline.
-
-**Output schema:** define your own, but it must be generic enough for a wide variety of fields and
-use cases, balancing flexibility with queryability and provenance.
-
-**Logistics:** 24h; any tools/stack; submit as a private fork shared with the evaluator, with a
-recorded demo and a write-up (architecture, trade-offs, evaluation and cost metrics, future
-improvements).
-
+Extract structured fields from a process datasheet so they can power search, technical bid
+evaluation, and more. **Build:** (1) an extraction pipeline that ingests a datasheet PDF and produces
+structured fields with citations; (2) a HITL feedback loop - a web interface to review/correct
+extractions and explain how feedback improves the pipeline. **Schema:** define your own, but generic
+enough for a wide variety of fields and use cases, balancing flexibility with queryability and
+provenance. **Logistics:** 24h; any stack; submit as a private fork shared with the evaluator, with a
+recorded demo and a write-up (architecture, trade-offs, evaluation and cost metrics, future work).
 **Evaluation:** extraction quality (accuracy, coverage); reliability and cost (cost per doc, failure
-modes); human-in-the-loop (how feedback is used, ergonomics); communication. Not looking for: auth,
-deployment, fancy UI.
+modes); human-in-the-loop (how feedback is used, ergonomics); communication. **Not looking for:**
+authentication, deployment, fancy UI beyond ergonomics for the HITL interface.

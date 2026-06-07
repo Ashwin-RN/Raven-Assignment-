@@ -147,7 +147,7 @@ def feedback_demo() -> None:
     gold = load_gold("pds-P718")
 
     def run() -> dict:
-        d = extract_document("pds-P718", "pds-P718.pdf", be, art)
+        d = extract_document("pds-P718", os.path.join("pdfs", "pds-P718.pdf"), be, art)
         save_raw(d)
         return score_doc(d, gold)
 

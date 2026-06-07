@@ -6,3 +6,4 @@ outputs/artifacts/
 vocab_overrides.json
 test_out.txt
 *.tmp
+DECISIONS.md
