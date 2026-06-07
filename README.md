@@ -105,7 +105,7 @@ extraction improves. Full detail in [`WRITEUP.md`](WRITEUP.md).
 
 ---
 
-## Status & limitations (honest)
+## Status & limitations 
 
 - All five build phases are complete and run **keyless** on fixtures.
 - The fixture-based eval validates the **pipeline and deterministic normalization**, not model
