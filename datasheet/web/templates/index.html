@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Documents</h1>
+{% if not docs %}
+  <p class="muted">No extractions yet. Run <code>python cli.py extract *.pdf</code> first.</p>
+{% else %}
+<table>
+  <thead>
+    <tr><th>Document</th><th>Type</th><th>Fields</th><th>Reviewed</th><th>Low conf (&lt;0.8)</th><th>Canonical-mapped</th></tr>
+  </thead>
+  <tbody>
+    {% for d in docs %}
+    <tr>
+      <td><a href="/doc/{{ d.doc_id }}">{{ d.doc_id }}</a></td>
+      <td class="muted">{{ d.doc_type or "-" }}</td>
+      <td>{{ d.fields }}</td>
+      <td>{{ d.reviewed }} / {{ d.fields }}</td>
+      <td>{{ d.low_conf }}</td>
+      <td>{{ d.mapped }} / {{ d.fields }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

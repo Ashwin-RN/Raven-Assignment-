@@ -1,0 +1,434 @@
+{
+  "doc_id": "pds-P718",
+  "doc_type": "centrifugal_pump_datasheet",
+  "language": [
+    "en"
+  ],
+  "source_pages": 3,
+  "fields": [
+    {
+      "id": "pds-P718:p2:service:0",
+      "type": "title_block",
+      "canonical_key": "equipment.service",
+      "label_verbatim": "SERVICE",
+      "value_raw": "Diesel Product",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "SERVICE Diesel Product",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:product:0",
+      "type": "scalar",
+      "canonical_key": "fluid.name",
+      "label_verbatim": "Product",
+      "value_raw": "Hydrocarbon",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "Product Hydrocarbon",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:auto_ignition_temperature:0",
+      "type": "scalar",
+      "canonical_key": "temperature.operating",
+      "label_verbatim": "Auto-ignition temperature",
+      "value_raw": "480.0",
+      "value_normalized": 480.0,
+      "unit": "degF",
+      "unit_si": "degC",
+      "value_si": 248.8889,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "Auto-ignition temperature degF 480.0",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.95,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:normal_flowrate:0",
+      "type": "scalar",
+      "canonical_key": "flow.nominal",
+      "label_verbatim": "Normal flowrate",
+      "value_raw": "928",
+      "value_normalized": 928.0,
+      "unit": "GPM",
+      "unit_si": "m3/h",
+      "value_si": 210.7711,
+      "qualifiers": [
+        "Normal flow for the pump is for HMB Case 1 - High Conversion SOR (Rev5)."
+      ],
+      "case": "normal",
+      "citation": {
+        "page": 2,
+        "snippet": "Normal flowrate (11) GPM 928",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:minimum_flowrate:0",
+      "type": "scalar",
+      "canonical_key": "flow.minimum",
+      "label_verbatim": "Minimum flowrate",
+      "value_raw": "464",
+      "value_normalized": 464.0,
+      "unit": "GPM",
+      "unit_si": "m3/h",
+      "value_si": 105.3855,
+      "qualifiers": [
+        "Minimum flow for the pump is 50% of normal flow."
+      ],
+      "case": "minimum",
+      "citation": {
+        "page": 2,
+        "snippet": "Minimum flowrate (12) GPM 464",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:design_flowrate:0",
+      "type": "scalar",
+      "canonical_key": "flow.design",
+      "label_verbatim": "Design flowrate",
+      "value_raw": "1021",
+      "value_normalized": 1021.0,
+      "unit": "GPM",
+      "unit_si": "m3/h",
+      "value_si": 231.8936,
+      "qualifiers": [],
+      "case": "design",
+      "citation": {
+        "page": 2,
+        "snippet": "Design flowrate GPM 1021",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:discharge_pressure:0",
+      "type": "scalar",
+      "canonical_key": "pressure.discharge",
+      "label_verbatim": "Discharge pressure",
+      "value_raw": "174.5",
+      "value_normalized": 174.5,
+      "unit": "psig",
+      "unit_si": "bar g",
+      "value_si": 12.0314,
+      "qualifiers": [],
+      "case": "normal",
+      "citation": {
+        "page": 2,
+        "snippet": "Discharge pressure psig 174.5",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:suction_pressure:0",
+      "type": "scalar",
+      "canonical_key": "pressure.suction",
+      "label_verbatim": "Suction pressure",
+      "value_raw": "-2.5",
+      "value_normalized": -2.5,
+      "unit": "psig",
+      "unit_si": "bar g",
+      "value_si": -0.1724,
+      "qualifiers": [],
+      "case": "normal",
+      "citation": {
+        "page": 2,
+        "snippet": "Suction pressure psig -2.5",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:differential_head_a:0",
+      "type": "scalar",
+      "canonical_key": "head.differential",
+      "label_verbatim": "Differential head (A)",
+      "value_raw": "538.9",
+      "value_normalized": 538.9,
+      "unit": "ft",
+      "unit_si": "m",
+      "value_si": 164.2567,
+      "qualifiers": [],
+      "case": "normal",
+      "citation": {
+        "page": 2,
+        "snippet": "Differential head (A) ft 538.9",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.98,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:available_npsh:0",
+      "type": "scalar",
+      "canonical_key": "npsh.available",
+      "label_verbatim": "Available NPSH",
+      "value_raw": "28.9",
+      "value_normalized": 28.9,
+      "unit": "ft",
+      "unit_si": "m",
+      "value_si": 8.8087,
+      "qualifiers": [
+        "NPSH available shall be at least 3 ft above NPSH required. NPSHa is specified at pump centerline assuming pump centerline is at 3 ft from grade."
+      ],
+      "case": "normal",
+      "citation": {
+        "page": 2,
+        "snippet": "Available NPSH ft 28.9 (7)",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.95,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:normal_shaft_power_est:0",
+      "type": "scalar",
+      "canonical_key": "power.shaft.normal",
+      "label_verbatim": "Normal shaft power (est.)",
+      "value_raw": "150.9",
+      "value_normalized": 150.9,
+      "unit": "hp",
+      "unit_si": "kW",
+      "value_si": 112.526,
+      "qualifiers": [
+        "To be confirmed by vendor."
+      ],
+      "case": "normal",
+      "citation": {
+        "page": 2,
+        "snippet": "Normal shaft power (est.) hp 150.9 (3)",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.9,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:design_temperature:0",
+      "type": "scalar",
+      "canonical_key": "temperature.design",
+      "label_verbatim": "Design temperature",
+      "value_raw": "500",
+      "value_normalized": 500.0,
+      "unit": "degF",
+      "unit_si": "degC",
+      "value_si": 260.0,
+      "qualifiers": [
+        "Minimum Design Metal Temperature = 0 degF."
+      ],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "Design temperature degF 500 (2)",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.97,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p2:material_of_construction_casing_impeller:0",
+      "type": "scalar",
+      "canonical_key": "material.casing_impeller",
+      "label_verbatim": "Material of construction (Casing / Impeller)",
+      "value_raw": "CS / CS",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "Material of construction (Casing / Impeller) CS / CS",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p3:total_flow:0",
+      "type": "table_cell",
+      "canonical_key": "flow.total",
+      "label_verbatim": "Total Flow",
+      "value_raw": "798",
+      "value_normalized": 798.0,
+      "unit": "GPM",
+      "unit_si": "m3/h",
+      "value_si": 181.245,
+      "qualifiers": [],
+      "case": "off-spec_to_pgo",
+      "citation": {
+        "page": 3,
+        "snippet": "Off-Spec. to PGO Total Flow (GPM) 798",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.92,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p3:discharge_pressure:1",
+      "type": "table_cell",
+      "canonical_key": "pressure.discharge",
+      "label_verbatim": "Discharge Pressure",
+      "value_raw": "202.8",
+      "value_normalized": 202.8,
+      "unit": "psig",
+      "unit_si": "bar g",
+      "value_si": 13.9826,
+      "qualifiers": [],
+      "case": "off-spec_to_pgo",
+      "citation": {
+        "page": 3,
+        "snippet": "Off-Spec. to PGO Discharge Pressure (psig) 202.8",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.92,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P718:p3:shaft_power:0",
+      "type": "table_cell",
+      "canonical_key": "power.shaft.normal",
+      "label_verbatim": "Shaft Power",
+      "value_raw": "68.4",
+      "value_normalized": 68.4,
+      "unit": "hp",
+      "unit_si": "kW",
+      "value_si": 51.0058,
+      "qualifiers": [],
+      "case": "off-spec_to_pgo",
+      "citation": {
+        "page": 3,
+        "snippet": "Off-Spec. to PGO Shaft Power (hp) 68.4",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.9,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    }
+  ],
+  "notes": [
+    {
+      "marker": "(2)",
+      "text": "Minimum Design Metal Temperature = 0 degF.",
+      "page": 3
+    },
+    {
+      "marker": "(3)",
+      "text": "To be confirmed by vendor.",
+      "page": 3
+    },
+    {
+      "marker": "(7)",
+      "text": "NPSH available shall be at least 3 ft above NPSH required. NPSHa is specified at pump centerline assuming pump centerline is at 3 ft from grade.",
+      "page": 3
+    },
+    {
+      "marker": "(11)",
+      "text": "Normal flow for the pump is for HMB Case 1 - High Conversion SOR (Rev5).",
+      "page": 3
+    },
+    {
+      "marker": "(12)",
+      "text": "Minimum flow for the pump is 50% of normal flow.",
+      "page": 3
+    }
+  ],
+  "usage": {
+    "note": "hand-authored dev fixture - imperial units + multi-case off-spec table (page 3) exercising the `case` tag"
+  }
+}

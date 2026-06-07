@@ -1,0 +1,107 @@
+{
+  "doc_type": "centrifugal_pump_datasheet",
+  "language": ["fr", "en"],
+  "usage": {"note": "hand-authored dev fixture - no real model call; replace with recorded response when a key lands"},
+  "fields": [
+    {
+      "type": "scalar",
+      "label_verbatim": "LIQUID / LIQUID",
+      "value_raw": "water + traces of VCM",
+      "unit": null,
+      "footnote_markers": ["(5)"],
+      "page": 1,
+      "snippet": "LIQUID LIQUID water + traces of VCM (5)",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "DEBIT Nominal / FLOW Nominal",
+      "value_raw": "3.35",
+      "unit": "m3/h",
+      "footnote_markers": [],
+      "case": "normal",
+      "page": 1,
+      "snippet": "DEBIT Nominal FLOW Nominal 3.35",
+      "confidence": 0.95
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "DEBIT Maxi. / FLOW Maxi.",
+      "value_raw": "4.2",
+      "unit": "m3/h",
+      "footnote_markers": [],
+      "case": "max",
+      "page": 1,
+      "snippet": "DEBIT Maxi. FLOW Maxi. 4.2 m3/h",
+      "confidence": 0.95
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "PRESS. REFOULEMENT / DISCHARGE PRESS.",
+      "value_raw": "3.98",
+      "unit": "kg/cm2 g",
+      "footnote_markers": ["(2)", "(3)"],
+      "page": 1,
+      "snippet": "DISCHARGE PRESS. (2)(3) 3.98 kg/cm2g",
+      "confidence": 0.88
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "PRESSION ASPIRATION / SUCTION PRESSURE",
+      "value_raw": "0.7",
+      "unit": "kg/cm2 g",
+      "footnote_markers": ["(2)", "(3)"],
+      "page": 1,
+      "snippet": "SUCTION PRESSURE (2)(3) 0.7 kg/cm2g",
+      "confidence": 0.86
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "MASSE VOL. A PT / DENSITY AT PT",
+      "value_raw": "941",
+      "unit": "kg/m3",
+      "footnote_markers": [],
+      "page": 1,
+      "snippet": "DENSITY AT PT 941 kg/m3",
+      "confidence": 0.93
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "HAUTEUR MANO. / DIFFERENTIAL HEAD",
+      "value_raw": "35",
+      "unit": "m. liq.",
+      "footnote_markers": ["(1)", "(2)"],
+      "page": 1,
+      "snippet": "DIFFERENTIAL HEAD (1)(2) 35 m. liq.",
+      "confidence": 0.84
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "P. ABS / BHP RATED",
+      "value_raw": "2.7",
+      "unit": "kW",
+      "footnote_markers": ["(4)"],
+      "case": "design",
+      "page": 1,
+      "snippet": "P. ABS BHP RATED 2.7 (4) kW",
+      "confidence": 0.72
+    },
+    {
+      "type": "title_block",
+      "label_verbatim": "CLIENT / CUSTOMER",
+      "value_raw": "[REDACTED]",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 1,
+      "snippet": "CLIENT CUSTOMER [black box]",
+      "confidence": 1.0
+    }
+  ],
+  "notes": [
+    {"marker": "(1)", "text": "VALUE STATED FOR DESIGN FLOWRATE", "page": 1},
+    {"marker": "(2)", "text": "NPSHA INDICATED IS FROM PUMP CENTERLINE WHICH IS AT 800 mm ELEVATION FROM GRADE.", "page": 1},
+    {"marker": "(3)", "text": "ESTIMATED DISCHARGE DESIGN PRESSURE (CORRESPONDING TO SHUT-OFF PRESSURE) IS 16 kg/cm2 g. DESIGN TEMPERATURE: 240 degC. DESIGN SUCTION PRESSURE: 11 kg/cm2 g.", "page": 1},
+    {"marker": "(4)", "text": "ESTIMATED SHAFT POWER. TO BE CONFIRMED BY PUMP VENDOR. MOTOR SHALL BE ENERGY-EFFICIENT: CEI60034-30, class IE2 or IE3, or equivalent.", "page": 1},
+    {"marker": "(5)", "text": "PUMPED FLUID IS MAINLY WATER WITH TRACES OF VCM AND HCl.", "page": 1}
+  ]
+}

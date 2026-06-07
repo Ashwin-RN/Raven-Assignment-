@@ -1,0 +1,272 @@
+{
+  "doc_id": "pds-P300228",
+  "doc_type": "centrifugal_pump_datasheet",
+  "language": [
+    "fr",
+    "en"
+  ],
+  "source_pages": 2,
+  "fields": [
+    {
+      "id": "pds-P300228:p1:liquid_liquid:0",
+      "type": "scalar",
+      "canonical_key": "fluid.name",
+      "label_verbatim": "LIQUID / LIQUID",
+      "value_raw": "water + traces of VCM",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [
+        "PUMPED FLUID IS MAINLY WATER WITH TRACES OF VCM AND HCl."
+      ],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "LIQUID LIQUID water + traces of VCM (5)",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:debit_nominal_flow_nominal:0",
+      "type": "scalar",
+      "canonical_key": "flow.nominal",
+      "label_verbatim": "DEBIT Nominal / FLOW Nominal",
+      "value_raw": "3.35",
+      "value_normalized": 3.35,
+      "unit": "m3/h",
+      "unit_si": "m3/h",
+      "value_si": 3.35,
+      "qualifiers": [],
+      "case": "normal",
+      "citation": {
+        "page": 1,
+        "snippet": "DEBIT Nominal FLOW Nominal 3.35",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:debit_maxi_flow_maxi:0",
+      "type": "scalar",
+      "canonical_key": "flow.maximum",
+      "label_verbatim": "DEBIT Maxi. / FLOW Maxi.",
+      "value_raw": "4.2",
+      "value_normalized": 4.2,
+      "unit": "m3/h",
+      "unit_si": "m3/h",
+      "value_si": 4.2,
+      "qualifiers": [],
+      "case": "max",
+      "citation": {
+        "page": 1,
+        "snippet": "DEBIT Maxi. FLOW Maxi. 4.2 m3/h",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:press_refoulement_discharge_press:0",
+      "type": "scalar",
+      "canonical_key": "pressure.discharge",
+      "label_verbatim": "PRESS. REFOULEMENT / DISCHARGE PRESS.",
+      "value_raw": "3.98",
+      "value_normalized": 3.98,
+      "unit": "kg/cm2 g",
+      "unit_si": "bar g",
+      "value_si": 3.903,
+      "qualifiers": [
+        "NPSHA INDICATED IS FROM PUMP CENTERLINE WHICH IS AT 800 mm ELEVATION FROM GRADE.",
+        "ESTIMATED DISCHARGE DESIGN PRESSURE (CORRESPONDING TO SHUT-OFF PRESSURE) IS 16 kg/cm2 g. DESIGN TEMPERATURE: 240 degC. DESIGN SUCTION PRESSURE: 11 kg/cm2 g."
+      ],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "DISCHARGE PRESS. (2)(3) 3.98 kg/cm2g",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.98,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:pression_aspiration_suction_pressure:0",
+      "type": "scalar",
+      "canonical_key": "pressure.suction",
+      "label_verbatim": "PRESSION ASPIRATION / SUCTION PRESSURE",
+      "value_raw": "0.7",
+      "value_normalized": 0.7,
+      "unit": "kg/cm2 g",
+      "unit_si": "bar g",
+      "value_si": 0.6865,
+      "qualifiers": [
+        "NPSHA INDICATED IS FROM PUMP CENTERLINE WHICH IS AT 800 mm ELEVATION FROM GRADE.",
+        "ESTIMATED DISCHARGE DESIGN PRESSURE (CORRESPONDING TO SHUT-OFF PRESSURE) IS 16 kg/cm2 g. DESIGN TEMPERATURE: 240 degC. DESIGN SUCTION PRESSURE: 11 kg/cm2 g."
+      ],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "SUCTION PRESSURE (2)(3) 0.7 kg/cm2g",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.96,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:masse_vol_a_pt_density_at_pt:0",
+      "type": "scalar",
+      "canonical_key": "density.operating",
+      "label_verbatim": "MASSE VOL. A PT / DENSITY AT PT",
+      "value_raw": "941",
+      "value_normalized": 941.0,
+      "unit": "kg/m3",
+      "unit_si": "kg/m3",
+      "value_si": 941.0,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "DENSITY AT PT 941 kg/m3",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:hauteur_mano_differential_head:0",
+      "type": "scalar",
+      "canonical_key": "head.differential",
+      "label_verbatim": "HAUTEUR MANO. / DIFFERENTIAL HEAD",
+      "value_raw": "35",
+      "value_normalized": 35.0,
+      "unit": "m. liq.",
+      "unit_si": "m",
+      "value_si": 35.0,
+      "qualifiers": [
+        "VALUE STATED FOR DESIGN FLOWRATE",
+        "NPSHA INDICATED IS FROM PUMP CENTERLINE WHICH IS AT 800 mm ELEVATION FROM GRADE."
+      ],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "DIFFERENTIAL HEAD (1)(2) 35 m. liq.",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.94,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:p_abs_bhp_rated:0",
+      "type": "scalar",
+      "canonical_key": "power.shaft.rated",
+      "label_verbatim": "P. ABS / BHP RATED",
+      "value_raw": "2.7",
+      "value_normalized": 2.7,
+      "unit": "kW",
+      "unit_si": "kW",
+      "value_si": 2.7,
+      "qualifiers": [
+        "ESTIMATED SHAFT POWER. TO BE CONFIRMED BY PUMP VENDOR. MOTOR SHALL BE ENERGY-EFFICIENT: CEI60034-30, class IE2 or IE3, or equivalent."
+      ],
+      "case": "design",
+      "citation": {
+        "page": 1,
+        "snippet": "P. ABS BHP RATED 2.7 (4) kW",
+        "source_backend": "fixture",
+        "text_layer_match": true
+      },
+      "confidence": 0.82,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P300228:p1:client_customer:0",
+      "type": "title_block",
+      "canonical_key": "client.name",
+      "label_verbatim": "CLIENT / CUSTOMER",
+      "value_raw": "[REDACTED]",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [
+        "redacted"
+      ],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "CLIENT CUSTOMER [black box]",
+        "source_backend": "fixture",
+        "text_layer_match": false
+      },
+      "confidence": 1.0,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    }
+  ],
+  "notes": [
+    {
+      "marker": "(1)",
+      "text": "VALUE STATED FOR DESIGN FLOWRATE",
+      "page": 1
+    },
+    {
+      "marker": "(2)",
+      "text": "NPSHA INDICATED IS FROM PUMP CENTERLINE WHICH IS AT 800 mm ELEVATION FROM GRADE.",
+      "page": 1
+    },
+    {
+      "marker": "(3)",
+      "text": "ESTIMATED DISCHARGE DESIGN PRESSURE (CORRESPONDING TO SHUT-OFF PRESSURE) IS 16 kg/cm2 g. DESIGN TEMPERATURE: 240 degC. DESIGN SUCTION PRESSURE: 11 kg/cm2 g.",
+      "page": 1
+    },
+    {
+      "marker": "(4)",
+      "text": "ESTIMATED SHAFT POWER. TO BE CONFIRMED BY PUMP VENDOR. MOTOR SHALL BE ENERGY-EFFICIENT: CEI60034-30, class IE2 or IE3, or equivalent.",
+      "page": 1
+    },
+    {
+      "marker": "(5)",
+      "text": "PUMPED FLUID IS MAINLY WATER WITH TRACES OF VCM AND HCl.",
+      "page": 1
+    }
+  ],
+  "usage": {
+    "note": "hand-authored dev fixture - no real model call; replace with recorded response when a key lands"
+  }
+}

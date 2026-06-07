@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Datasheet Review{% endblock %}</title>
+  <style>
+    :root { --bg:#f7f7f5; --line:#e2e0da; --ink:#1f2328; --muted:#6b7280; --accent:#a4633a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:14px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+           color:var(--ink); background:var(--bg); }
+    header { padding:14px 20px; border-bottom:1px solid var(--line); background:#fff; }
+    header a { color:var(--accent); text-decoration:none; font-weight:600; }
+    main { padding:18px 20px; }
+    h1 { font-size:18px; margin:0; }
+    table { border-collapse:collapse; width:100%; background:#fff; }
+    th, td { border:1px solid var(--line); padding:6px 8px; vertical-align:top; text-align:left; }
+    th { background:#faf9f6; font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); }
+    input { font:inherit; padding:3px 5px; border:1px solid var(--line); border-radius:4px; width:100%; }
+    button { font:inherit; padding:4px 9px; border:1px solid var(--line); border-radius:5px;
+             background:#fff; cursor:pointer; }
+    button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+    button:hover { filter:brightness(.97); }
+    .muted { color:var(--muted); }
+    .snippet { font-size:12px; color:var(--muted); max-width:260px; }
+    .pill { display:inline-block; padding:1px 7px; border-radius:999px; font-size:11px; font-weight:600; }
+    .s-unreviewed { background:#eee; color:#555; }
+    .s-confirmed { background:#e3f2e3; color:#1e6b29; }
+    .s-corrected { background:#fdeccf; color:#8a5a12; }
+    .conf-lo { color:#b3261e; font-weight:700; }
+    .conf-md { color:#8a5a12; font-weight:600; }
+    .conf-hi { color:#1e6b29; font-weight:600; }
+    .ground-true { color:#1e6b29; } .ground-false { color:#b3261e; } .ground-none { color:var(--muted); }
+    .filters { margin-bottom:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .filters select, .filters input { width:auto; }
+    .thumb { max-height:40px; border:1px solid var(--line); border-radius:3px; }
+    code { background:#f0eee9; padding:1px 4px; border-radius:3px; }
+  </style>
+</head>
+<body {% block bodyattrs %}{% endblock %}>
+  <header><a href="/">Datasheet Review</a> <span class="muted">/ HITL field correction</span></header>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>

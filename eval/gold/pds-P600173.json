@@ -1,0 +1,13 @@
+[
+  {"match": "SERVICE", "canonical_key": "equipment.service", "value": "RECYCLED WATER PUMP (10 KG/CM2G)", "unit": null, "page": 1},
+  {"match": "N OF UNITS", "canonical_key": "units.count", "value": "4", "unit": null, "page": 1},
+  {"match": "LIQUID", "canonical_key": "fluid.name", "value": "RECYCLED WATER", "unit": null, "page": 1},
+  {"match": "FLOW Nominal", "case": "normal", "canonical_key": "flow.nominal", "value": "100", "unit": "m3/h", "page": 1},
+  {"match": "FLOW Maxi", "case": "max", "canonical_key": "flow.maximum", "value": "120", "unit": "m3/h", "page": 1},
+  {"match": "DISCHARGE PRESSURE", "canonical_key": "pressure.discharge", "value": "11.4", "unit": "kg/cm2 g", "page": 1},
+  {"match": "DENSITY", "canonical_key": "density.operating", "value": "981", "unit": "kg/m3", "page": 1},
+  {"match": "BHP RATED", "case": "design", "canonical_key": "power.shaft.rated", "value": "61.2", "unit": "kW", "page": 1},
+  {"match": "IMPELLER", "canonical_key": "material.impeller", "value": "SS 304", "unit": null, "page": 2},
+  {"match": "MECHANICAL SEAL", "canonical_key": "seal.type", "value": "Single Seal Plan 11", "unit": null, "page": 2},
+  {"match": "VOLTS", "canonical_key": "motor.voltage", "value": "415/3/50", "unit": null, "page": 2}
+]

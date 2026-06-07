@@ -1,0 +1,11 @@
+[
+  {"match": "LIQUID", "canonical_key": "fluid.name", "value": "water + traces of VCM", "unit": null, "page": 1},
+  {"match": "FLOW Nominal", "case": "normal", "canonical_key": "flow.nominal", "value": "3.35", "unit": "m3/h", "page": 1},
+  {"match": "FLOW Maxi", "case": "max", "canonical_key": "flow.maximum", "value": "4.2", "unit": "m3/h", "page": 1},
+  {"match": "DISCHARGE PRESS", "canonical_key": "pressure.discharge", "value": "3.98", "unit": "kg/cm2 g", "page": 1},
+  {"match": "SUCTION PRESSURE", "canonical_key": "pressure.suction", "value": "0.7", "unit": "kg/cm2 g", "page": 1},
+  {"match": "DENSITY", "canonical_key": "density.operating", "value": "941", "unit": "kg/m3", "page": 1},
+  {"match": "DIFFERENTIAL HEAD", "canonical_key": "head.differential", "value": "35", "unit": "m. liq.", "page": 1},
+  {"match": "BHP RATED", "case": "design", "canonical_key": "power.shaft.rated", "value": "2.7", "unit": "kW", "page": 1},
+  {"match": "CLIENT", "canonical_key": "client.name", "value": "[REDACTED]", "unit": null, "page": 1}
+]

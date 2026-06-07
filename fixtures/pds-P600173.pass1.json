@@ -1,0 +1,127 @@
+{
+  "doc_type": "centrifugal_pump_datasheet",
+  "language": ["fr", "en"],
+  "usage": {"note": "hand-authored dev fixture - page 1 is a flattened scan (no text layer), so grounding is expected to be unavailable for page-1 fields"},
+  "fields": [
+    {
+      "type": "title_block",
+      "label_verbatim": "FONCTION / SERVICE",
+      "value_raw": "RECYCLED WATER PUMP (10 KG/CM2G)",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 1,
+      "snippet": "FONCTION SERVICE RECYCLED WATER PUMP (10 KG/CM2G)",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "QUANTITE NECESSAIRE / N OF UNITS",
+      "value_raw": "4",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 1,
+      "snippet": "QUANTITE NECESSAIRE N OF UNITS 4",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "LIQUID / LIQUID",
+      "value_raw": "RECYCLED WATER",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 1,
+      "snippet": "LIQUID RECYCLED WATER",
+      "confidence": 0.92
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "DEBIT Nominal / FLOW Nominal",
+      "value_raw": "100",
+      "unit": "m3/h",
+      "footnote_markers": [],
+      "case": "normal",
+      "page": 1,
+      "snippet": "FLOW Nominal 100 DEBIT Maxi 120 m3/h",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "DEBIT Maxi. / FLOW Maxi.",
+      "value_raw": "120",
+      "unit": "m3/h",
+      "footnote_markers": [],
+      "case": "max",
+      "page": 1,
+      "snippet": "FLOW Maxi 120 m3/h",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "PRESS. REFOULEMENT / DISCHARGE PRESSURE",
+      "value_raw": "11.4",
+      "unit": "kg/cm2 g",
+      "footnote_markers": ["(5)"],
+      "page": 1,
+      "snippet": "DISCHARGE PRESSURE 11.4 (5) kg/cm2g",
+      "confidence": 0.82
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "MASSE VOL. A PT / DENSITY AT PT",
+      "value_raw": "981",
+      "unit": "kg/m3",
+      "footnote_markers": [],
+      "page": 1,
+      "snippet": "DENSITY AT PT 981 kg/m3",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "P. ABS / BHP RATED",
+      "value_raw": "61.2",
+      "unit": "kW",
+      "footnote_markers": ["(1)", "(4)"],
+      "case": "design",
+      "page": 1,
+      "snippet": "BHP RATED 61.2 (1)(4) kW",
+      "confidence": 0.7
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "ROUE / IMPELLER",
+      "value_raw": "SS 304",
+      "unit": null,
+      "footnote_markers": ["(6)"],
+      "page": 2,
+      "snippet": "IMPELLER SS 304 (6)",
+      "confidence": 0.85
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "GARNITURE MECANIQUE / MECHANICAL SEAL MFR",
+      "value_raw": "Single Seal Plan 11",
+      "unit": null,
+      "footnote_markers": ["(12)"],
+      "page": 2,
+      "snippet": "MECHANICAL SEAL Single Seal Plan 11 (12)",
+      "confidence": 0.8
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "VOLTS/PHASES/Hz / VOLTS/PHASES/Hz",
+      "value_raw": "415/3/50",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 2,
+      "snippet": "VOLTS/PHASES/Hz 415/3/50",
+      "confidence": 0.88
+    }
+  ],
+  "notes": [
+    {"marker": "(1)", "text": "VALUE STATED FOR DESIGN FLOWRATE", "page": 1},
+    {"marker": "(4)", "text": "ESTIMATED SHAFT POWER TO BE CONFIRMED BY PUMP VENDOR. MOTOR SHALL BE ENERGY-EFFICIENT: CEI60034-30, CLASS IE2 OR IE3, OR EQUIVALENT.", "page": 1},
+    {"marker": "(5)", "text": "DESIGN PRESSURE: SUCTION DESIGN PRESSURE = 0.68 kg/cm2 g. DESIGN TEMPERATURE = 98 degC.", "page": 2},
+    {"marker": "(6)", "text": "STAINLESS STEEL WITH CARBON CONTENT LESS THAN 0.04%", "page": 2},
+    {"marker": "(12)", "text": "SEAL PLAN AND FLUSHING LIQUID REQUIREMENT FOR PUMP TO BE CONFIRMED BY MECHANICAL DISCIPLINE IN MDS BASED ON VENDOR REQUIREMENT.", "page": 2}
+  ]
+}

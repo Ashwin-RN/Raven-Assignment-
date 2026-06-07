@@ -1,0 +1,314 @@
+{
+  "doc_id": "pds-P600173",
+  "doc_type": "centrifugal_pump_datasheet",
+  "language": [
+    "fr",
+    "en"
+  ],
+  "source_pages": 2,
+  "fields": [
+    {
+      "id": "pds-P600173:p1:fonction_service:0",
+      "type": "title_block",
+      "canonical_key": "equipment.service",
+      "label_verbatim": "FONCTION / SERVICE",
+      "value_raw": "RECYCLED WATER PUMP (10 KG/CM2G)",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "FONCTION SERVICE RECYCLED WATER PUMP (10 KG/CM2G)",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.9,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p1:quantite_necessaire_n_of_units:0",
+      "type": "scalar",
+      "canonical_key": "units.count",
+      "label_verbatim": "QUANTITE NECESSAIRE / N OF UNITS",
+      "value_raw": "4",
+      "value_normalized": 4.0,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "QUANTITE NECESSAIRE N OF UNITS 4",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.9,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p1:liquid_liquid:0",
+      "type": "scalar",
+      "canonical_key": "fluid.name",
+      "label_verbatim": "LIQUID / LIQUID",
+      "value_raw": "RECYCLED WATER",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "LIQUID RECYCLED WATER",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.92,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p1:debit_nominal_flow_nominal:0",
+      "type": "scalar",
+      "canonical_key": "flow.nominal",
+      "label_verbatim": "DEBIT Nominal / FLOW Nominal",
+      "value_raw": "100",
+      "value_normalized": 100.0,
+      "unit": "m3/h",
+      "unit_si": "m3/h",
+      "value_si": 100.0,
+      "qualifiers": [],
+      "case": "normal",
+      "citation": {
+        "page": 1,
+        "snippet": "FLOW Nominal 100 DEBIT Maxi 120 m3/h",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.9,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p1:debit_maxi_flow_maxi:0",
+      "type": "scalar",
+      "canonical_key": "flow.maximum",
+      "label_verbatim": "DEBIT Maxi. / FLOW Maxi.",
+      "value_raw": "120",
+      "value_normalized": 120.0,
+      "unit": "m3/h",
+      "unit_si": "m3/h",
+      "value_si": 120.0,
+      "qualifiers": [],
+      "case": "max",
+      "citation": {
+        "page": 1,
+        "snippet": "FLOW Maxi 120 m3/h",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.9,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p1:press_refoulement_discharge_pressure:0",
+      "type": "scalar",
+      "canonical_key": "pressure.discharge",
+      "label_verbatim": "PRESS. REFOULEMENT / DISCHARGE PRESSURE",
+      "value_raw": "11.4",
+      "value_normalized": 11.4,
+      "unit": "kg/cm2 g",
+      "unit_si": "bar g",
+      "value_si": 11.1796,
+      "qualifiers": [
+        "DESIGN PRESSURE: SUCTION DESIGN PRESSURE = 0.68 kg/cm2 g. DESIGN TEMPERATURE = 98 degC."
+      ],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "DISCHARGE PRESSURE 11.4 (5) kg/cm2g",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.82,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p1:masse_vol_a_pt_density_at_pt:0",
+      "type": "scalar",
+      "canonical_key": "density.operating",
+      "label_verbatim": "MASSE VOL. A PT / DENSITY AT PT",
+      "value_raw": "981",
+      "value_normalized": 981.0,
+      "unit": "kg/m3",
+      "unit_si": "kg/m3",
+      "value_si": 981.0,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 1,
+        "snippet": "DENSITY AT PT 981 kg/m3",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.9,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p1:p_abs_bhp_rated:0",
+      "type": "scalar",
+      "canonical_key": "power.shaft.rated",
+      "label_verbatim": "P. ABS / BHP RATED",
+      "value_raw": "61.2",
+      "value_normalized": 61.2,
+      "unit": "kW",
+      "unit_si": "kW",
+      "value_si": 61.2,
+      "qualifiers": [
+        "VALUE STATED FOR DESIGN FLOWRATE",
+        "ESTIMATED SHAFT POWER TO BE CONFIRMED BY PUMP VENDOR. MOTOR SHALL BE ENERGY-EFFICIENT: CEI60034-30, CLASS IE2 OR IE3, OR EQUIVALENT."
+      ],
+      "case": "design",
+      "citation": {
+        "page": 1,
+        "snippet": "BHP RATED 61.2 (1)(4) kW",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.7,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p2:roue_impeller:0",
+      "type": "scalar",
+      "canonical_key": "material.impeller",
+      "label_verbatim": "ROUE / IMPELLER",
+      "value_raw": "SS 304",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [
+        "STAINLESS STEEL WITH CARBON CONTENT LESS THAN 0.04%"
+      ],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "IMPELLER SS 304 (6)",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.85,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p2:garniture_mecanique_mechanical_seal_mfr:0",
+      "type": "scalar",
+      "canonical_key": "seal.type",
+      "label_verbatim": "GARNITURE MECANIQUE / MECHANICAL SEAL MFR",
+      "value_raw": "Single Seal Plan 11",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [
+        "SEAL PLAN AND FLUSHING LIQUID REQUIREMENT FOR PUMP TO BE CONFIRMED BY MECHANICAL DISCIPLINE IN MDS BASED ON VENDOR REQUIREMENT."
+      ],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "MECHANICAL SEAL Single Seal Plan 11 (12)",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.8,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "pds-P600173:p2:volts_phases_hz_volts_phases_hz:0",
+      "type": "scalar",
+      "canonical_key": "motor.voltage",
+      "label_verbatim": "VOLTS/PHASES/Hz / VOLTS/PHASES/Hz",
+      "value_raw": "415/3/50",
+      "value_normalized": null,
+      "unit": null,
+      "unit_si": null,
+      "value_si": null,
+      "qualifiers": [],
+      "case": null,
+      "citation": {
+        "page": 2,
+        "snippet": "VOLTS/PHASES/Hz 415/3/50",
+        "source_backend": "fixture",
+        "text_layer_match": null
+      },
+      "confidence": 0.88,
+      "mapping_uncertain": false,
+      "review_status": "unreviewed",
+      "original_value_raw": null,
+      "reviewed_at": null
+    }
+  ],
+  "notes": [
+    {
+      "marker": "(1)",
+      "text": "VALUE STATED FOR DESIGN FLOWRATE",
+      "page": 1
+    },
+    {
+      "marker": "(4)",
+      "text": "ESTIMATED SHAFT POWER TO BE CONFIRMED BY PUMP VENDOR. MOTOR SHALL BE ENERGY-EFFICIENT: CEI60034-30, CLASS IE2 OR IE3, OR EQUIVALENT.",
+      "page": 1
+    },
+    {
+      "marker": "(5)",
+      "text": "DESIGN PRESSURE: SUCTION DESIGN PRESSURE = 0.68 kg/cm2 g. DESIGN TEMPERATURE = 98 degC.",
+      "page": 2
+    },
+    {
+      "marker": "(6)",
+      "text": "STAINLESS STEEL WITH CARBON CONTENT LESS THAN 0.04%",
+      "page": 2
+    },
+    {
+      "marker": "(12)",
+      "text": "SEAL PLAN AND FLUSHING LIQUID REQUIREMENT FOR PUMP TO BE CONFIRMED BY MECHANICAL DISCIPLINE IN MDS BASED ON VENDOR REQUIREMENT.",
+      "page": 2
+    }
+  ],
+  "usage": {
+    "note": "hand-authored dev fixture - page 1 is a flattened scan (no text layer), so grounding is expected to be unavailable for page-1 fields"
+  }
+}

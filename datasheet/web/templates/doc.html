@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}{{ doc.doc_id }} - Review{% endblock %}
+{% block bodyattrs %}data-docid="{{ doc.doc_id }}"{% endblock %}
+{% block content %}
+<h1>{{ doc.doc_id }} <span class="muted">{{ doc.doc_type or "" }} - {{ fields|length }} fields shown</span></h1>
+
+<form class="filters" method="get" action="/doc/{{ doc.doc_id }}">
+  <label>Status
+    <select name="status">
+      {% for s in ["all","unreviewed","confirmed","corrected"] %}
+      <option value="{{ s }}" {{ "selected" if filters.status==s }}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Page
+    <select name="page">
+      <option value="0">all</option>
+      {% for p in pages %}<option value="{{ p }}" {{ "selected" if filters.page==p }}>{{ p }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Canonical key <input name="key" value="{{ filters.key }}" placeholder="e.g. flow"></label>
+  <label>Sort
+    <select name="sort">
+      <option value="confidence" {{ "selected" if filters.sort=='confidence' }}>confidence (low first)</option>
+      <option value="page" {{ "selected" if filters.sort=='page' }}>page</option>
+    </select>
+  </label>
+  <button type="submit">Apply</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conf</th><th>Label (verbatim)</th><th>Canonical key</th><th>Value</th><th>Unit</th>
+      <th>SI</th><th>Qualifiers</th><th>Citation</th><th>Status</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for f in fields %}
+    <tr data-fid="{{ f.id }}">
+      <td>
+        {% set c = "conf-hi" if f.confidence>=0.8 else ("conf-md" if f.confidence>=0.6 else "conf-lo") %}
+        <span class="{{ c }}">{{ "%.2f"|format(f.confidence) }}</span>
+      </td>
+      <td>{{ f.label_verbatim }}<br><span class="muted">{{ f.type }}{% if f.case %} - case: {{ f.case }}{% endif %}</span></td>
+      <td><input class="f-key" value="{{ f.canonical_key or '' }}" {{ 'style=border-color:#d9b' if f.mapping_uncertain }}></td>
+      <td><input class="f-val" value="{{ f.value_raw }}"></td>
+      <td><input class="f-unit" value="{{ f.unit or '' }}"></td>
+      <td class="muted">{% if f.value_si is not none %}{{ f.value_si }} {{ f.unit_si }}{% else %}-{% endif %}</td>
+      <td class="muted">{{ f.qualifiers|join("; ") }}</td>
+      <td>
+        <div>p{{ f.citation.page }}
+          {% if f.citation.text_layer_match is none %}<span class="ground-none" title="no text layer">o grounding n/a</span>
+          {% elif f.citation.text_layer_match %}<span class="ground-true" title="value found in text layer">+ grounded</span>
+          {% else %}<span class="ground-false" title="value not found in text layer">! ungrounded</span>{% endif %}
+        </div>
+        <div class="snippet">{{ f.citation.snippet }}</div>
+        <a href="/artifacts/{{ doc.doc_id }}/page-{{ f.citation.page }}.png" target="_blank">
+          <img class="thumb" src="/artifacts/{{ doc.doc_id }}/page-{{ f.citation.page }}.png" alt="page {{ f.citation.page }}"></a>
+      </td>
+      <td><span class="pill s-{{ f.review_status }}">{{ f.review_status }}</span></td>
+      <td>
+        <button class="primary" onclick="act(this,'confirm')">Confirm</button>
+        <button onclick="act(this,'correct')">Save</button>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<script>
+async function act(btn, action){
+  const row = btn.closest('tr');
+  const fid = row.dataset.fid;
+  const docId = document.body.dataset.docid;
+  const body = {
+    action,
+    value_raw: row.querySelector('.f-val').value,
+    unit: row.querySelector('.f-unit').value,
+    canonical_key: row.querySelector('.f-key').value
+  };
+  const r = await fetch(`/api/doc/${encodeURIComponent(docId)}/field/${encodeURIComponent(fid)}`, {
+    method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body)
+  });
+  if (r.ok) { location.reload(); } else { const e = await r.json(); alert('Save failed: ' + (e.error||r.status)); }
+}
+</script>
+{% endblock %}

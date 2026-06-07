@@ -1,0 +1,10 @@
+google-genai
+pydantic
+fastapi
+uvicorn
+python-dotenv
+jinja2
+anthropic
+pymupdf4llm
+click
+tabulate

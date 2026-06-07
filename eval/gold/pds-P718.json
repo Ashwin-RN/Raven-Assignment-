@@ -1,0 +1,16 @@
+[
+  {"match": "SERVICE", "canonical_key": "equipment.service", "value": "Diesel Product", "unit": null, "page": 2},
+  {"match": "Product", "canonical_key": "fluid.name", "value": "Hydrocarbon", "unit": null, "page": 2},
+  {"match": "Auto-ignition", "canonical_key": "fluid.autoignition_temperature", "value": "480.0", "unit": "degF", "page": 2},
+  {"match": "Normal flowrate", "case": "normal", "canonical_key": "flow.nominal", "value": "928", "unit": "GPM", "page": 2},
+  {"match": "Minimum flowrate", "case": "minimum", "canonical_key": "flow.minimum", "value": "464", "unit": "GPM", "page": 2},
+  {"match": "Design flowrate", "case": "design", "canonical_key": "flow.design", "value": "1021", "unit": "GPM", "page": 2},
+  {"match": "Discharge pressure", "case": "normal", "canonical_key": "pressure.discharge", "value": "174.5", "unit": "psig", "page": 2},
+  {"match": "Suction pressure", "case": "normal", "canonical_key": "pressure.suction", "value": "-2.5", "unit": "psig", "page": 2},
+  {"match": "Differential head", "case": "normal", "canonical_key": "head.differential", "value": "538.9", "unit": "ft", "page": 2},
+  {"match": "Available NPSH", "case": "normal", "canonical_key": "npsh.available", "value": "28.9", "unit": "ft", "page": 2},
+  {"match": "Normal shaft power", "case": "normal", "canonical_key": "power.shaft.normal", "value": "150.9", "unit": "hp", "page": 2},
+  {"match": "Design temperature", "canonical_key": "temperature.design", "value": "500", "unit": "degF", "page": 2},
+  {"match": "Material of construction", "canonical_key": "material.casing_impeller", "value": "CS / CS", "unit": null, "page": 2},
+  {"match": "Total Flow", "case": "off-spec_to_pgo", "canonical_key": "flow.total", "value": "798", "unit": "GPM", "page": 3}
+]

@@ -1,0 +1,185 @@
+{
+  "doc_type": "centrifugal_pump_datasheet",
+  "language": ["en"],
+  "usage": {"note": "hand-authored dev fixture - imperial units + multi-case off-spec table (page 3) exercising the `case` tag"},
+  "fields": [
+    {
+      "type": "title_block",
+      "label_verbatim": "SERVICE",
+      "value_raw": "Diesel Product",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 2,
+      "snippet": "SERVICE Diesel Product",
+      "confidence": 0.92
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Product",
+      "value_raw": "Hydrocarbon",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 2,
+      "snippet": "Product Hydrocarbon",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Auto-ignition temperature",
+      "value_raw": "480.0",
+      "unit": "degF",
+      "footnote_markers": [],
+      "page": 2,
+      "snippet": "Auto-ignition temperature degF 480.0",
+      "confidence": 0.85
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Normal flowrate",
+      "value_raw": "928",
+      "unit": "GPM",
+      "footnote_markers": ["(11)"],
+      "case": "normal",
+      "page": 2,
+      "snippet": "Normal flowrate (11) GPM 928",
+      "confidence": 0.93
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Minimum flowrate",
+      "value_raw": "464",
+      "unit": "GPM",
+      "footnote_markers": ["(12)"],
+      "case": "minimum",
+      "page": 2,
+      "snippet": "Minimum flowrate (12) GPM 464",
+      "confidence": 0.93
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Design flowrate",
+      "value_raw": "1021",
+      "unit": "GPM",
+      "footnote_markers": [],
+      "case": "design",
+      "page": 2,
+      "snippet": "Design flowrate GPM 1021",
+      "confidence": 0.93
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Discharge pressure",
+      "value_raw": "174.5",
+      "unit": "psig",
+      "footnote_markers": [],
+      "case": "normal",
+      "page": 2,
+      "snippet": "Discharge pressure psig 174.5",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Suction pressure",
+      "value_raw": "-2.5",
+      "unit": "psig",
+      "footnote_markers": [],
+      "case": "normal",
+      "page": 2,
+      "snippet": "Suction pressure psig -2.5",
+      "confidence": 0.9
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Differential head (A)",
+      "value_raw": "538.9",
+      "unit": "ft",
+      "footnote_markers": [],
+      "case": "normal",
+      "page": 2,
+      "snippet": "Differential head (A) ft 538.9",
+      "confidence": 0.88
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Available NPSH",
+      "value_raw": "28.9",
+      "unit": "ft",
+      "footnote_markers": ["(7)"],
+      "case": "normal",
+      "page": 2,
+      "snippet": "Available NPSH ft 28.9 (7)",
+      "confidence": 0.85
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Normal shaft power (est.)",
+      "value_raw": "150.9",
+      "unit": "hp",
+      "footnote_markers": ["(3)"],
+      "case": "normal",
+      "page": 2,
+      "snippet": "Normal shaft power (est.) hp 150.9 (3)",
+      "confidence": 0.8
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Design temperature",
+      "value_raw": "500",
+      "unit": "degF",
+      "footnote_markers": ["(2)"],
+      "page": 2,
+      "snippet": "Design temperature degF 500 (2)",
+      "confidence": 0.87
+    },
+    {
+      "type": "scalar",
+      "label_verbatim": "Material of construction (Casing / Impeller)",
+      "value_raw": "CS / CS",
+      "unit": null,
+      "footnote_markers": [],
+      "page": 2,
+      "snippet": "Material of construction (Casing / Impeller) CS / CS",
+      "confidence": 0.9
+    },
+    {
+      "type": "table_cell",
+      "label_verbatim": "Total Flow",
+      "value_raw": "798",
+      "unit": "GPM",
+      "footnote_markers": [],
+      "case": "off-spec_to_pgo",
+      "page": 3,
+      "snippet": "Off-Spec. to PGO Total Flow (GPM) 798",
+      "confidence": 0.82
+    },
+    {
+      "type": "table_cell",
+      "label_verbatim": "Discharge Pressure",
+      "value_raw": "202.8",
+      "unit": "psig",
+      "footnote_markers": [],
+      "case": "off-spec_to_pgo",
+      "page": 3,
+      "snippet": "Off-Spec. to PGO Discharge Pressure (psig) 202.8",
+      "confidence": 0.82
+    },
+    {
+      "type": "table_cell",
+      "label_verbatim": "Shaft Power",
+      "value_raw": "68.4",
+      "unit": "hp",
+      "footnote_markers": [],
+      "case": "off-spec_to_pgo",
+      "page": 3,
+      "snippet": "Off-Spec. to PGO Shaft Power (hp) 68.4",
+      "confidence": 0.8
+    }
+  ],
+  "notes": [
+    {"marker": "(2)", "text": "Minimum Design Metal Temperature = 0 degF.", "page": 3},
+    {"marker": "(3)", "text": "To be confirmed by vendor.", "page": 3},
+    {"marker": "(7)", "text": "NPSH available shall be at least 3 ft above NPSH required. NPSHa is specified at pump centerline assuming pump centerline is at 3 ft from grade.", "page": 3},
+    {"marker": "(11)", "text": "Normal flow for the pump is for HMB Case 1 - High Conversion SOR (Rev5).", "page": 3},
+    {"marker": "(12)", "text": "Minimum flow for the pump is 50% of normal flow.", "page": 3}
+  ]
+}
